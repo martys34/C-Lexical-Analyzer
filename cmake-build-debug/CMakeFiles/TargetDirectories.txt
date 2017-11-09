@@ -1,0 +1,3 @@
+C:/Users/Marty/CLionProjects/Lexical Analyzer C - Marty Spiewak/cmake-build-debug/CMakeFiles/Lexical_Analyzer_C.dir
+C:/Users/Marty/CLionProjects/Lexical Analyzer C - Marty Spiewak/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Marty/CLionProjects/Lexical Analyzer C - Marty Spiewak/cmake-build-debug/CMakeFiles/rebuild_cache.dir
