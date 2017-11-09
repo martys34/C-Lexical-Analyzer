@@ -7,7 +7,7 @@ char testKey[50];
 char tk[10000];
 
 
-FILE* file;
+FILE *file;
 Stack* stack;
 char* keywordStrings[] = {
         "auto",
@@ -124,9 +124,9 @@ int main(int argc, char *argv[]) {
     }
 
     file = fopen(path, "r");
-    //if opening in a linux environment
+    //if opening in linux environment
     if(file == NULL) {
-        path = "/TestFile.c";
+        path = "TestFile.c";
         file = fopen(path, "r");
     }
     if(file != NULL) {
