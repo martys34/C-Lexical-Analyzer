@@ -114,20 +114,35 @@ _Bool checkHex(char c);
 _Bool checkSuffix(char c);
 TokenType checkKeyword(char* lex);
 
-int main() {
-    file = fopen("../TestFile.c", "r");
-    if(file != NULL) {
-        stack = createStack();
+int main(int argc, char *argv[]) {
+    char* path;
+    if(argc > 1) {
+        path = argv[1];
+    }
+    else {
+        path = "../TestFile.c";
     }
 
-    Token* token = nextToken();
-    while(token->type != END) {
-        printf(tokenToString(token));
-        memset(tk, 0, sizeof(tk));
-        memset(testKey, 0, sizeof(testKey));
-        token = nextToken();
+    file = fopen(path, "r");
+    //if opening in a linux environment
+    if(file == NULL) {
+        path = "/TestFile.c";
+        file = fopen(path, "r");
     }
-    printf(tokenToString(token));
+    if(file != NULL) {
+        stack = createStack();
+
+        Token *token = nextToken();
+        while (token->type != END) {
+            printf("%s", tokenToString(token));
+            memset(tk, 0, sizeof(tk));
+            memset(testKey, 0, sizeof(testKey));
+            token = nextToken();
+        }
+        printf("%s", tokenToString(token));
+    }
+
+    return 0;
 }
 
 Token* nextToken() {
