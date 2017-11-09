@@ -198,7 +198,6 @@ typedef struct Token Token;
 
 char* tokenToString(Token* token);
 
-//check the for loop here
 Token* createToken(TokenType t, char* lex, int end){
     Token* token = malloc(sizeof(Token));
     token->lexeme = lex;

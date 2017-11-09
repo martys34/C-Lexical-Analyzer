@@ -134,7 +134,6 @@ Token* nextToken() {
     char c;
     //index of token
     int i, state;
-    char nextTest;
 
     //skip whitespace
     while (isspace(c = getNextChar()) || c == '\r') ;
@@ -804,7 +803,7 @@ Token* nextToken() {
             }
             ungetChar(second);
             return createToken(ASSIGN, tk, i);
-        //just added
+
         default:
             break;
     }
